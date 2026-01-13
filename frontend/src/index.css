@@ -1,0 +1,89 @@
+/* Medical Color Scheme */
+:root {
+  --primary-color: #1a73e8; /* Professional blue */
+  --primary-light: #63a4ff;
+  --primary-dark: #0045b5;
+  --secondary-color: #e53935; /* Alert red */
+  --secondary-light: #ff6f60;
+  --secondary-dark: #ab000d;
+  --accent-color: #43a047; /* Green for normal results */
+  --accent-light: #76d275;
+  --accent-dark: #00701a;
+  --light-color: #f5f7fa;
+  --dark-color: #263238;
+  --text-color: #37474f;
+  --text-light: #607d8b;
+  --white: #ffffff;
+  --gray-light: #cfd8dc;
+  --gray-medium: #90a4ae;
+  --gray-dark: #455a64;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1rem;
+  background: 
+    linear-gradient(135deg, rgba(26, 115, 232, 0.9) 0%, rgba(0, 69, 181, 0.9) 100%),
+    url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+  color: var(--white);
+  text-align: center;
+  min-height: 60vh;
+}
+
+/* Features Section */
+.feature-card {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.feature-icon.detection {
+  background-color: var(--primary-color);
+}
+
+.feature-icon.accurate {
+  background-color: var(--accent-color);
+}
+
+.feature-icon.support {
+  background-color: var(--secondary-color);
+}
+
+/* Results Section */
+.result-card.normal {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-dark) 100%);
+}
+
+.result-card.pneumonia {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
+}
+
+/* Disclaimer Section */
+.disclaimer-section {
+  background-color: #fff8e1;
+  padding: 2rem;
+  border-left: 4px solid #ffc107;
+}
+
+/* X-Ray Preview Styling */
+.preview-image {
+  background-color: #000;
+  filter: contrast(1.1) brightness(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+    min-height: 50vh;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
